@@ -11,4 +11,4 @@
     - name: create docker image 
       shell: docker run -d --name rj_demo -p 8090:8080 tomcat
     - name: Dockerfile built
-      shell: docker built /opt/docker/Dockerfile
+      shell: docker build -t /opt/docker/Dockerfile
