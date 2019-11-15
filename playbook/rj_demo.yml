@@ -7,7 +7,8 @@
       shell: systemctl enable docker && systemctl start docker
     - name: to restart docker
       shell: systemctl start docker
- 
+    - name: to remove old docker container
+      shell: docker rm -f rj_demo
     - name: create docker image 
       shell: docker run -d --name rj_demo -p 8090:8080 tomcat
     
