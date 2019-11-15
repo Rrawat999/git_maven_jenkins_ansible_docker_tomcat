@@ -2,12 +2,13 @@
  - hosts: all
    become: true
    tasks: 
+    - name: to install the docker
+      shell: yum install docker -y
+    - name: to start the docker  
+      shell: systemctl enable docker && systemctl start
     - name: to restart docker
       shell: systemctl start docker
-    - name: stop previous version docker
-      shell: docker stop rj_demo
-    - name: remove stopped container
-      shell: docker rm -f rj_demo
+ 
     - name: create docker image 
       shell: docker run -d --name rj_demo -p 8090:8080 tomcat
     
