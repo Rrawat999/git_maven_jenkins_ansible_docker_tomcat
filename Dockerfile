@@ -5,7 +5,7 @@ FROM tomcat
 MAINTAINER rrawat999@outlook.com
 
 #copy path to tomcat path
-ADD webappc1.war /usr/local/tomcat/webapps/
+ADD webapp.war /usr/local/tomcat/webapps/
 
 EXPOSE 8090
 
