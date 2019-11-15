@@ -2,10 +2,9 @@
  - hosts: all
    become: true
    tasks: 
-    - name: to install the docker
-      shell: yum install docker -y
+    
     - name: to start the docker  
-      shell: systemctl enable docker && systemctl start
+      shell: systemctl enable docker && systemctl start docker
     - name: to restart docker
       shell: systemctl start docker
  
