@@ -1,0 +1,10 @@
+---
+ - name: install and start docker
+   hosts: all
+   user: root
+   tasks:
+    - name: install docker
+      yum: pkg=docker state=latest
+
+    - name: start httpd
+      service: name=docker state=started
