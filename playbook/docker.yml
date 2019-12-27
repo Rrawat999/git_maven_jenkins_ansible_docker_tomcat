@@ -6,5 +6,5 @@
     - name: install docker
       yum: pkg=docker state=latest
 
-    - name: start httpd
+    - name: start docker
       service: name=docker state=started
