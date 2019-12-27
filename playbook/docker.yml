@@ -5,9 +5,6 @@
    tasks:
     - name: install docker
       yum: pkg=docker state=latest
-    - name: to start the docker  
-      shell: systemctl enable docker && systemctl start docker
-    - name: to restart docker
-      shell: systemctl restart docker
+   
     - name: create docker image 
-      shell: docker run -d --name rj_demo -p 8090:8080 tomcat
+      shell: docker run -d --name centos1 centos
